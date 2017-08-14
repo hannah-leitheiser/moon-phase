@@ -1,10 +1,12 @@
 <?php
 
 // moon.php - by Hannah Leitheiser
-//   Computes the current phase of the moon, three future phases, and draws
-//   the moon and that data on a PNG image to ouput a PNG image.
-//   run: php moon.php > output.png (in bash)
+//    Computes the current phase of the moon, three future phases, and draws
+//    the moon and that data on a PNG image to ouput a PNG image.
+//    run: php moon.php > output.png (in bash)
 //      (or put it in a website, I guess)
+//    demonstration:
+//       http://flower.web.runbox.net/moon.php
 //   requires: php's gd library for image processing
 //       moon.png   1280x720 background image
 //       firstq.png 35x35 first quarter moon icon
