@@ -1,3 +1,5 @@
+<?php
+
 // moon.php - by Hannah Leitheiser
 //   Computes the current phase of the moon, three future phases, and draws
 //   the moon and that data on a PNG image and to ouput a PNG image.
@@ -9,22 +11,28 @@
 //       lastq.png  35x35 last quarter moon icon
 //       new.png    35x35 new moon icon
 
-<?php
+
+header('Content-Type: image/png');
+
+// ------------------------------ calculations ---------------------------------
 
 $lunarMonthDays=29.5306; // days
 $lunarMonth=$lunarMonthDays * 86400; // seconds
 
 // compute periods from a known new moon
 $moonPeriods = -(1503343800 - time()) / (29.5306 * 86400);
-// computer the phase as a fraction from zero to one.  Zero and one indicating new moon.  0.5 indicating full moon.
+// computer the phase as a fraction from zero to one.  Zero and one indicating new moon.  
+// 0.5 indicating full moon.
 $moonPhase = $moonPeriods - floor($moonPeriods);
 // Use theta = moonPhase*2pi
-// cos(theta) represents one coordinate of a unit circle, or the only relevant coordinate of movement around a circle on edge.  
+// cos(theta) represents one coordinate of a unit circle, or 
+// the only relevant coordinate of movement around a circle on edge.  
 //The light at the moon's equator can be imagined as such a circle. 
 $lightPortion=(1-cos($moonPhase*2*3.141592659))/2;
 
 
-// Save the phase label.  Demarkations are somewhat arbitrary.  I gave 1/16 of the month -- about two days I suppose, to 
+// Save the phase label.  Demarkations are somewhat arbitrary.  
+// I gave 1/16 of the month -- about two days I suppose, to 
 // momentary phases such as new moon and full moon.
 switch( floor($moonPhase * 32) ) {
       case 0:
@@ -124,7 +132,7 @@ for($y=0; $y<$moonDrawSize;$y=$y+1) {
       }
 
    // Set the pixels
-   $y=$start;
+   $x=$start;
     for( ; $x < $end ;$x=$x+1) {
       imagesetpixel($image, $x,$y+$moonY, $black);
       }
@@ -196,7 +204,6 @@ imagecopy($image, $nextPhase3, $newPhaseX+100,$newPhaseY+150,0,0,35,35);
  
 // ---------------------- output the image -------------------------------------------0
 
-header('Content-Type: image/png');
-imagepng($image);
 
+imagepng($image);
 ?>
