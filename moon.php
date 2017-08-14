@@ -2,7 +2,7 @@
 
 // moon.php - by Hannah Leitheiser
 //   Computes the current phase of the moon, three future phases, and draws
-//   the moon and that data on a PNG image and to ouput a PNG image.
+//   the moon and that data on a PNG image to ouput a PNG image.
 //   run: php moon.php
 //   requires: php's gd library for image processing
 //       moon.png   1280x720 background image
@@ -13,7 +13,7 @@
 
 
 header('Content-Type: image/png');
-
+ 
 // ------------------------------ calculations ---------------------------------
 
 $lunarMonthDays=29.5306; // days
