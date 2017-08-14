@@ -23,7 +23,7 @@ header('Content-Type: image/png');
 
 // The first goal is to computer $moonPhase, which will take the follow
 // values coresponding to the following phases:
-//   $moonphase
+//     $moonphase
 //        0.00             New Moon
 //       (0.00 to 0.25)    Waxing Crescent
 //        0.25             First Quarter
@@ -33,7 +33,7 @@ header('Content-Type: image/png');
 //        0.75             Last Quarter
 //       (0.75 to 1.00)    Waining Crescent
 //          Parenthesis indicate non-inclusive ranges.
-//          or example, $moonPhase should never equal one.
+//          For example, $moonPhase should never equal one.
 
 $lunarMonthDays=29.5306; // days
 $lunarMonth=$lunarMonthDays * 86400; // seconds
