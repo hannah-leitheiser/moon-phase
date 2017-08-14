@@ -24,14 +24,14 @@ header('Content-Type: image/png');
 // The first goal is to computer $moonPhase, which will take the follow
 // values coresponding to the following phases:
 //   $moonphase
-//        0.00           New Moon
-//       (0.00 to 0.25)   Waxing Crescent
-//        0.25           First Quarter
-//       (0.25 to 0.50)   Waxing Gibbous
-//        0.50           Full Moon
-//       (0.50 to 0,75)   Waining Gibbous
-//        0.75           Last Quarter
-//       (0.75 to 1.00)   Waining Crescent
+//        0.00             New Moon
+//       (0.00 to 0.25)    Waxing Crescent
+//        0.25             First Quarter
+//       (0.25 to 0.50)    Waxing Gibbous
+//        0.50             Full Moon
+//       (0.50 to 0,75)    Waining Gibbous
+//        0.75             Last Quarter
+//       (0.75 to 1.00)    Waining Crescent
 //          Parenthesis indicate non-inclusive ranges.
 //          or example, $moonPhase should never equal one.
 
