@@ -1,8 +1,11 @@
 <?php
 
 // moon.php - by Hannah Leitheiser
-//    Computes the current phase of the moon, three future phases, and draws
-//    the moon and that data on a PNG image to ouput a PNG image.
+//    Description: Computes the current phase of the moon, three future phases, and draws
+//       the moon and that data on a PNG image to ouput a PNG image.
+//       Assumes period behavior of the moon; will not account for 
+//       the elipticity or the moon's
+//       orbit, solar influences, or any other permutations.
 //    run: php moon.php > output.png (in bash)
 //      (or put it in a website, I guess)
 //    demonstration:
