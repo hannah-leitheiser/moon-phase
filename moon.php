@@ -3,14 +3,14 @@
 // moon.php - by Hannah Leitheiser
 //   Computes the current phase of the moon, three future phases, and draws
 //   the moon and that data on a PNG image to ouput a PNG image.
-//   run: php moon.php
+//   run: php moon.php > output.png (in bash)
+//      (or put it in a website, I guess)
 //   requires: php's gd library for image processing
 //       moon.png   1280x720 background image
 //       firstq.png 35x35 first quarter moon icon
 //       full.png   35x35 full moon icon
 //       lastq.png  35x35 last quarter moon icon
 //       new.png    35x35 new moon icon
-
 
 header('Content-Type: image/png');
  
@@ -203,7 +203,6 @@ imagestring($image, 5, $newPhaseX + 55+100, $newPhaseY+150+8,  $text, $text_colo
 imagecopy($image, $nextPhase3, $newPhaseX+100,$newPhaseY+150,0,0,35,35);
  
 // ---------------------- output the image -------------------------------------------0
-
 
 imagepng($image);
 ?>
